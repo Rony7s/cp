@@ -41,7 +41,26 @@ int main() {
     
     // score area
     
-    printf("Your Score is: %d", marks);
+    int t = marks;
+    
+    printf("Correct: %d\nWrong: %d\nPersentage: %d\n", t, (5-t), (t*20));
+    
+    
+    
+    int x;
+    // print option right wrong;
+    for(int i=0; i<5; i++){
+        if(ans[i]==currect[i]){
+            printf("%.2d. %s\n", i+1, question[i]);
+            x = currect[i];
+            printf("\t[*] %s \n", option[i][x-1]);
+        }else{
+            printf("%.2d. %s\n", i+1, question[i]);
+            x = currect[i];
+            printf("\t[Currect] %s \n", option[i][x-1]);
+        }
+         
+    }
     
     return 0;
 }
